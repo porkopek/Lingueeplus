@@ -37,3 +37,15 @@ browser.storage.local
 browser.storage.onChanged.addListener(changes =>
   sortResults(changes.importantUrls.newValue)
 );
+
+var searchInput = document.querySelector('#queryinput');
+function focusInput(e) {
+  if (e.keyCode === 27) {
+    if (searchInput) {
+      searchInput.focus();
+      searchInput.setSelectionRange(0, searchInput.value.length);
+    }
+  }
+}
+
+document.addEventListener('keyup', focusInput);

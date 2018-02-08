@@ -9,7 +9,6 @@ const importantUrlsPromise = browser.storage.local
 
 //render the stored urls
 const renderUrls = urls => {
-  console.log('urls to reder ', urls);
   const urlsHTML =
     urls === undefined || urls.length === 0
       ? ''
@@ -49,7 +48,6 @@ const removeUrl = event => {
     .then(result => result['importantUrls'])
     .then(urls => urls.filter(url => url !== urlToRemove))
     .then(urls => {
-      console.log('novo array urls após delete ', urls);
       browser.storage.local.set({
         importantUrls: urls
       });
@@ -61,14 +59,13 @@ const removeUrl = event => {
 // add url function
 const addUrl = () => {
   const url = document.querySelector('#urlInput').value;
-  console.log('url to add ', url);
+
   browser.storage.local
     .get('importantUrls')
     .then(result => result['importantUrls'])
     .then(urls => {
-      console.log('array sem url added', urls);
       var newUrls = urls === undefined ? [url] : [...urls, url];
-      console.log('array com url added ', newUrls);
+
       return newUrls;
     })
     .then(urls2 => {
