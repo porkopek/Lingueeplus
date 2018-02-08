@@ -9,29 +9,31 @@ const importantUrlsPromise = browser.storage.local
 
 //render the stored urls
 const renderUrls = urls => {
+  console.log('urls array ', urls);
   const urlsHTML =
     urls === undefined || urls.length === 0
       ? ''
       : urls
-          .map(
-            (url, index) => `
+          .map((url, index) => {
+            console.log('url ', url);
+            return `
         <div 
           id ="url-${index}" 
           class="important-url" 
-          data-url=${url}>
+          data-url="${url}">
             ${url}
             <button id="btn-${index}"class="delete-url">
               x
             </button>            
-        </div>`
-          )
+        </div>`;
+          })
           .reduce((a, b) => a + b);
 
   // append HTML
   var urlsSection = document.querySelector('#urlsSection');
   urlsSection.innerHTML = urlsHTML;
 
-  //add event listener to delete url buttons
+  //remove buttons
   const deleteButtons = [...document.querySelectorAll('.delete-url')];
   deleteButtons.map(deleteButton => {
     deleteButton.addEventListener('click', removeUrl);
@@ -42,7 +44,7 @@ const renderUrls = urls => {
 const removeUrl = event => {
   const urlId = 'url-' + event.target.id.split('-')[1];
   const urlToRemove = document.querySelector(`#${urlId}`).dataset.url;
-
+  console.log('url to remove ', urlToRemove);
   browser.storage.local
     .get('importantUrls')
     .then(result => result['importantUrls'])
