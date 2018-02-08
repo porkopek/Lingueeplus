@@ -23,7 +23,7 @@ const renderUrls = urls => {
           data-url="${url}">
             ${url}
             <button id="btn-${index}"class="delete-url">
-              x
+              ×
             </button>            
         </div>`;
           })
