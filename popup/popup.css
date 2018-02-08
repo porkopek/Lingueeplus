@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+body {
+  font-family: 'Segoe Ui';
+  width: 350px;
+}
+
+label {
+  padding: 3px 10px;
+  background-color: lightgray;
+  border-radius: 3px;
+}
+input {
+  margin: 10px 0;
+}
+button {
+  padding: 5px 15px;
+  border-radius: 3px;
+  background-color: rgb(49, 49, 49);
+  color: white;
+  box-shadow: none;
+  border: none;
+  font-family: 'Segoe Ui';
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgba(49, 49, 49, 0.7);
+}
+#urlsSection {
+  margin: 5px 0;
+  border: 1px solid;
+  padding: 10px;
+  min-height: 200px;
+}

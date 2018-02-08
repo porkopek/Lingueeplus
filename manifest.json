@@ -1,0 +1,22 @@
+{
+  "description": "Lingue Super Powers",
+  "manifest_version": 2,
+  "name": "Lingue SP",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "permissions": ["activeTab", "storage"],
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "Linguee SP",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linguee.es/*"],
+      "js": ["content_scripts/content_script.js"],
+      "css": ["content_scripts/content_script.css"]
+    }
+  ]
+}
