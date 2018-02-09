@@ -60,8 +60,11 @@ const removeUrl = event => {
 
 // add url function
 const addUrl = () => {
-  const url = document.querySelector('#urlInput').value;
-
+  const urlInput = document.querySelector('#urlInput');
+  let url = urlInput.value;
+  url = url.replace(/[<>]/g, '');
+  urlInput.value = '';
+  if (url === '') return;
   browser.storage.local
     .get('importantUrls')
     .then(result => result['importantUrls'])

@@ -7,7 +7,8 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Arial, Helvetica,
     sans-serif !important;
   width: 350px;
-  background-color: #eee;
+  background-color: rgb(241, 241, 241);
+  padding: 10px 20px;
 }
 
 #urlInput {
@@ -23,19 +24,17 @@ body {
   border-radius: 2px;
 }
 button#addUrlButton {
-  padding: 5px 15px;
+  padding: 5px 25px;
   border-radius: 4px;
-  background-color: #27ae60;
+  background-color: #0a84ff;
   color: white;
   box-shadow: none;
   border: none;
   font-family: 'Segoe Ui';
-
-  font-size: 14px;
 }
 button#addUrlButton:hover {
   cursor: pointer;
-  background-color: #27ae5fb0;
+  background-color: #0a84ffb4;
 }
 #urlsSection {
   margin: 5px 0 0;
@@ -52,13 +51,14 @@ button#addUrlButton:hover {
   position: relative;
   border-radius: 2em;
   border: 1px solid lightgray;
-  margin: 3px 5px;
+  margin: 3px 5px 3px 0;
   font-size: 14px;
   float: left;
 }
 .url-text {
   position: relative;
   bottom: 1px;
+  margin-right: 15px;
 }
 .delete-url {
   color: #a3a3a3;
@@ -71,6 +71,11 @@ button#addUrlButton:hover {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 1px;
+  border-radius: 50%;
+  background-color: rgb(206, 206, 206);
+  color: white;
 }
 .delete-url:hover {
   cursor: pointer;

@@ -10,16 +10,19 @@
 </head>
 
 <body>
-    <p>Enter some keywords to sort the results
+    <p>Enter some keywords to sort the results by site
         <span>(e. g.: to highlight all results from
             <u>eur-lex.europa.eu</u>, enter
             <b>eur</b> or
             <b>eur-lex</b> or even
             <b>europa</b>)</span>
     </p>
-    <input type="text" id="urlInput">
+    <input type="text" id="urlInput" autofocus>
     <button class="btn btn-success" id="addUrlButton">Add Filter</button>
-    <h3 style="margin-top:50px;">Filters added:</h3>
+    <br>
+    <br>
+    <hr style="box-shadow:0 0 3px white;border-color:white;height:1px;">
+    <h3>Filters added:</h3>
     <div id="urlsSection"></div>
     <script src="popup.js"></script>
 </body>
