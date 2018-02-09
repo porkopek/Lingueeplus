@@ -1,6 +1,6 @@
-// browser.storage.local.set({
-//   importantUrls: ['com']
-// });
+setTimeout(() => {
+  document.querySelector('body').focus();
+}, 100);
 
 //promise to get stored urls
 const importantUrlsPromise = browser.storage.local
@@ -17,15 +17,15 @@ const renderUrls = urls => {
           .map((url, index) => {
             console.log('url ', url);
             return `
-        <div 
+        <label 
           id ="url-${index}" 
           class="important-url" 
           data-url="${url}">
-            ${url}
-            <button id="btn-${index}"class="delete-url">
+           <span class="url-text"> ${url}</span>
+            <button id="btn-${index}"class="badge badge-danger delete-url">
               ×
             </button>            
-        </div>`;
+        </label>`;
           })
           .reduce((a, b) => a + b);
 

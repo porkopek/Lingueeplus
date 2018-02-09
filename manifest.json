@@ -4,11 +4,11 @@
   "name": "Lingue SP",
   "version": "1.0",
   "icons": {
-    "48": "icons/icon.png"
+    "48": "icons/linguee+.png"
   },
   "permissions": ["activeTab", "storage"],
   "browser_action": {
-    "default_icon": "icons/icon.png",
+    "default_icon": "icons/linguee+.png",
     "default_title": "Linguee SP",
     "default_popup": "popup/popup.html"
   },

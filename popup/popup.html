@@ -10,9 +10,16 @@
 </head>
 
 <body>
-    <h3>Add some filters</h3>
+    <p>Enter some keywords to sort the results
+        <span>(e. g.: to highlight all results from
+            <u>eur-lex.europa.eu</u>, enter
+            <b>eur</b> or
+            <b>eur-lex</b> or even
+            <b>europa</b>)</span>
+    </p>
     <input type="text" id="urlInput">
-    <button id="addUrlButton">Add Filter</button>
+    <button class="btn btn-success" id="addUrlButton">Add Filter</button>
+    <h3 style="margin-top:50px;">Filters added:</h3>
     <div id="urlsSection"></div>
     <script src="popup.js"></script>
 </body>
