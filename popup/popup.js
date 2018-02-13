@@ -63,6 +63,7 @@ const addUrl = () => {
   const urlInput = document.querySelector('#urlInput');
   let url = urlInput.value;
   url = url.replace(/[<>]/g, '');
+  url = url.trim();
   urlInput.value = '';
   if (url === '') return;
   browser.storage.local
